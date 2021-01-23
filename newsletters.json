@@ -1,0 +1,30 @@
+{  
+    "newsletters": [
+       {
+           "date": "11/17/20",
+            "calls for mutual aid": [
+                {"name": "Jane Doe's Wellness Fund", "link": "$janescashapp"},
+                {"name": "Johnny Appleseed's Bills", "link": "$cashappleseed"},
+                {"name": "Example 3 Gfme", "link": "www.gofundme.com/ex"},
+                {"name": "Community Organizer In Need", "link": "example"},
+                {"name": "Couple Housing Fund", "link": "$exexex"},
+                {"name": "Medical Bills", "link": "$jdfkjasd"},
+                {"name": "Example 7", "link": "www.gofundme.com/example7"}
+            ],
+            "art": [
+                {"title": "Untitled", "artist": "Anonymous", "img-src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Glass_of_Milk_%2833657535532%29.jpg", "description": "Found object"},
+                {"title": "Untitled", "artist": "Anonymous", "img-src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Glass_of_Milk_%2833657535532%29.jpg", "description": "Collage"},
+                {"title": "My House", "artist": "Anonymous", "description": "Line drawing on cardboard"}
+            ],
+            "events": [
+                {"date": "01/10/21", "title": "Medic training", "location": "555 Ex. Street", "description": "Introduction to skills needed to respond to emergencies"},
+                {"date": "01/11/21", "title": "Poetry Slam", "location": "My Basement, Ex. Ave.", "description": "Share and/or listen to poetry from members of your community"}
+            ], 
+            "housing needs & availabilities": [
+                {"title": "Couple in need of Housing in South City", "contact": "Contact them at 314-xxx-xxxx"},
+                {"title": "Garage Available for Sublet", "contact": "Email them xxxgarage@gmail.com"},
+                {"title": "House an artist while they pass through", "contact": "Write to us if you have even a couch to share"}
+            ]
+        }
+    ]
+} 
