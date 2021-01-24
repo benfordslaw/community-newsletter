@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="#"/>
+        <title>Dirty Money Alimony Submission</title>
+        <script>
+            function validateFormOnSubmit(f) {
+                category = f.category.value;
+                if(category == 'other') category = f.customCategory.value;
+                console.log(category);
+            }
+
+            function validateSelection(selection) {
+                if(selection == 'other'){
+                    var textIn = document.createElement("input");
+                    textIn.setAttribute('type', 'text');
+                    textIn.setAttribute('value', 'custom category');
+                    textIn.setAttribute('id', 'customCategory');
+                    document.getElementById('categoryField').appendChild(textIn);
+                } else if (document.getElementById('customCategory')) {
+                    document.getElementById('customCategory').remove();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Submit to the Next Newsletter</h1>
+        <form action="javascript:" onsubmit="validateFormOnSubmit(this);">
+            <fieldset id="categoryField">
+            <label for="category">Category:</label>
+            <select id="category" name="category" onchange="validateSelection(this.value)">
+              <optgroup label = "mutual aid">
+                <option value="calls for mutual aid (monetary)">calls for mutual aid (monetary)</option>
+                <option value="calls for mutual aid (other)">calls for mutual aid (other)</option>
+                <option value="housing needs & availabilities">housing needs & availabilities</option>
+              </optgroup>
+              <optgroup label = "art">
+                <option value="art">art</option>
+                <option value="poetry">poetry</option>
+              </optgroup>
+              <optgroup label = "education">
+                <option value="opinions">opinions</option>
+                <option value="resources">resources</option>
+                <option value="books">books</option>
+              </optgroup>
+              <option value="events">events</option>
+              <option value="other">other</option>
+            </select> 
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
