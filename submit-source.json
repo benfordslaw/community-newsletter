@@ -1,63 +1,6 @@
 {  
     "categories":  [
         {
-            "category": "education",
-            "subcategories": [
-                {
-                    "title": "opinions",
-                    "examples": "calls to action, opinions, things others should know, etc.",
-                    "inputs": [
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "author",
-                            "inputexample": "anonymous"
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "title",
-                            "inputexample": "untitled"
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "description (optional)",
-                            "inputexample": "summarize your writing"
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "contents",
-                            "inputexample": "put your writing here"
-                        }
-                    ]
-                },
-                {
-                    "title": "book recommendations",
-                    "examples": "books you think others should read too",
-                    "inputs": [
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "title",
-                            "inputexample": "sister outsider"
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "author",
-                            "inputexample": "audre lorde"
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "description (optional)",
-                            "inputexample": "i like this book because..."
-                        },
-                        {
-                            "inputtype": "text",
-                            "inputlabel": "link (optional)",
-                            "inputexample": "link to pdf or google drive"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "category": "mutual aid",
             "subcategories": [
                 {
@@ -311,6 +254,110 @@
                             "inputtype": "text",
                             "inputlabel": "contents",
                             "inputexample": "put your writing here"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "education",
+            "subcategories": [
+                {
+                    "title": "opinions",
+                    "examples": "calls to action, opinions, things others should know, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "author",
+                            "inputexample": "anonymous"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "title",
+                            "inputexample": "untitled"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "description (optional)",
+                            "inputexample": "summarize your writing"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "contents",
+                            "inputexample": "put your writing here"
+                        }
+                    ]
+                },
+                {
+                    "title": "book recommendations",
+                    "examples": "books you think others should read too",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "title",
+                            "inputexample": "sister outsider"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "author",
+                            "inputexample": "audre lorde"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "description (optional)",
+                            "inputexample": "i like this book because..."
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "link (optional)",
+                            "inputexample": "link to pdf or google drive"
+                        }
+                    ]
+                },
+                {
+                    "title": "how-to guides",
+                    "examples": "first aid guides, instructions, safety tips, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "title",
+                            "inputexample": "how to make detergent from borax"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "description (optional)",
+                            "inputexample": "saves me tons of money every months"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "instructions",
+                            "inputexample": "put the instructions here"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "other",
+            "subcategories": [
+                {
+                    "title": "events",
+                    "examples": "poetry reading, teach-in, food share, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "event name",
+                            "inputexample": "food share"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "date",
+                            "inputexample": "first friday of the month"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "location",
+                            "inputexample": "contact us for location"
                         }
                     ]
                 }
