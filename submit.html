@@ -4,10 +4,17 @@
         <title>Dirty Money Alimony Submission</title>
         <script>
             function validateFormOnSubmit(f) {
-                category = f.category.value;
-                if(category == 'other') category = f.customCategory.value;
-                console.log(category);
+                inputs = f.form.children.catInp.children;
+                output = {};
+                output[f.category.value] = {};
+                for(var i=0; i<inputs.length; i++){
+                  if(i%2==1){
+                    output[f.category.value][inputs[i].id] = inputs[i].value;
+                  }
+                }
+                console.log(output);
             }
+
             function validateSelection(selection) {
               form = document.getElementById("form");
               var title = document.getElementById("catTitle");
@@ -26,7 +33,6 @@
               }
               for(var i=0; i<catList.length; i++){
                 if(catList[i].title == selection){
-                  console.log(catList[i]);
                   title.innerHTML = "submit " + catList[i].title;
                   examples.innerHTML = "(for example " + catList[i].examples + ")";
                   inputs.innerHTML = "";
@@ -34,9 +40,9 @@
                     inputSRC = Object.values(catList[i])[2][j];
                     var inp = document.createElement("INPUT");
                     inp.setAttribute("type", inputSRC.inputtype);
-                    inp.setAttribute("id", "inp" + j);
+                    inp.setAttribute("id", inputSRC.inputlabel);
                     var lab = document.createElement("LABEL");
-                    lab.htmlFor = "inp" + j;
+                    lab.htmlFor = inputSRC.inputlabel;
                     lab.innerHTML = inputSRC.inputlabel;
                     inp.defaultValue=inputSRC.inputexample;
                     inputs.appendChild(lab);
