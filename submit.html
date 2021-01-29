@@ -10,43 +10,66 @@
             }
 
             function validateSelection(selection) {
-                if(selection == 'other'){
-                    var textIn = document.createElement("input");
-                    textIn.setAttribute('type', 'text');
-                    textIn.setAttribute('value', 'custom category');
-                    textIn.setAttribute('id', 'customCategory');
-                    document.getElementById('categoryField').appendChild(textIn);
-                } else if (document.getElementById('customCategory')) {
-                    document.getElementById('customCategory').remove();
-                }
+                console.log(selection);
             }
         </script>
+        <style>
+          fieldset {
+            width: 50%;
+            border: none;
+            display: inline-block;
+          }
+          input {
+            display: block;
+          }
+          select, input[type=text] {
+            width: 100%;
+            border: none;
+            padding: 5px;
+            margin: 10px;
+          }
+        </style>
     </head>
     <body>
         <h1>Submit to the Next Newsletter</h1>
         <form action="javascript:" onsubmit="validateFormOnSubmit(this);">
-            <fieldset id="categoryField">
-            <label for="category">Category:</label>
-            <select id="category" name="category" onchange="validateSelection(this.value)">
-              <optgroup label = "mutual aid">
-                <option value="calls for mutual aid (monetary)">calls for mutual aid (monetary)</option>
-                <option value="calls for mutual aid (other)">calls for mutual aid (other)</option>
-                <option value="housing needs & availabilities">housing needs & availabilities</option>
-              </optgroup>
-              <optgroup label = "art">
-                <option value="art">art</option>
-                <option value="poetry">poetry</option>
-              </optgroup>
-              <optgroup label = "education">
-                <option value="opinions">opinions</option>
-                <option value="resources">resources</option>
-                <option value="books">books</option>
-              </optgroup>
-              <option value="events">events</option>
-              <option value="other">other</option>
-            </select> 
-            </fieldset>
-            <input type="submit" value="Submit">
+          <fieldset id="categoryField">
+            <legend>Category:</legend>
+            <select id="category" onchange="validateSelection(this.value)"></select>
+            <script>
+              var select = document.getElementById("category");
+              function loadJSON(callback) {
+                  var xobj = new XMLHttpRequest();
+                  xobj.overrideMimeType("application/json");
+                  xobj.onreadystatechange = function () {
+                    if (xobj.readyState == 4 && xobj.status == "200") {
+                      callback(xobj.responseText);
+                    }
+                  };
+                  xobj.open('GET', 'submit-source.json', true);
+                  xobj.send(null);  
+              };
+          
+              loadJSON(function(response) {
+                catObj = Object.values(JSON.parse(response))[0];
+                for(var i=0; i<catObj.length; i++){
+                  subCatObj = Object.values(catObj[i]);
+                  optgroup = document.createElement("OPTGROUP");
+                  optgroup.label = subCatObj[0];
+                  optgroup.setAttribute("id", "optgroup" + i)
+                  select.appendChild(optgroup);
+                  var currentOptGroup = document.getElementById("optgroup" + i);
+                  for(var j=0; j<subCatObj[1].length; j++){
+                    subCat = Object.values(subCatObj[1][j]);
+                    opt = document.createElement("OPTION");
+                    opt.innerHTML = subCat[0];
+                    currentOptGroup.appendChild(opt);
+                  }
+                }
+              });
+            </script>
+          </fieldset>
+          <input type="submit" value="Submit">
         </form>
     </body>
 </html>

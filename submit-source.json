@@ -1,0 +1,298 @@
+{  
+    "categories":  [
+        {
+            "category": "education",
+            "subcategories": [
+                {
+                    "title": "submissions",
+                    "example": "calls to action, opinions, things others should know, etc."
+                },
+                {
+                    "title": "book recommendations",
+                    "examples": "books you think others should read too",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "title",
+                            "input-example": "sister outsider"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "author",
+                            "input-example": "audre lorde"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "description (optional)",
+                            "input-example": "i like this book because..."
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "link (optional)",
+                            "input-example": "link to pdf or google drive"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "mutual aid",
+            "subcategories": [
+                {
+                    "title": "services you can offer",
+                    "examples": "skillshares, babysitting, rides, grocery store runs, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "hi, i'm a dog walker available on wednesdays"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want to remain anonymous?"
+                        }
+                    ]
+                }, 
+                {
+                    "title": "things you can offer",
+                    "examples": "tools you have, garden space, materials you have, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "I have a cordless drill and various other power tools available"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want to remain anonymous?"
+                        }
+                    ]
+                }, 
+                {
+                    "title": "housing availabilities",
+                    "examples": "a couch to share, places you can sublet, available apartments, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "basement i can sublet"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "area",
+                            "input-example": "south city, benton park area"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want to remain anonymous?"
+                        }
+                    ]
+                }, 
+                {
+                    "title": "calls for funding",
+                    "examples": "cashapps, gofundme's, venmo's, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description (optional)",
+                            "input-example": "fern's wellness fund"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "deadline (optional)",
+                            "input-example": "end of the month"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "link",
+                            "input-example": "$my_cashapp_here"
+                        }
+                    ]
+                },
+                {
+                    "title": "calls for services",
+                    "examples": "needed babysitter, rides, grocery store runs, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "dog walker needed wednesdays"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want to remain anonymous?"
+                        }
+                    ]
+                }, 
+                {
+                    "title": "calls for things",
+                    "examples": "tools, building materials, art supplies, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "cordless drills needed to build my shed"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want it to be anonymous?"
+                        }, 
+                        {
+                            "input-type": "text",
+                            "input-label": "date(s) needed",
+                            "input-example": "first weekend of next month"
+                        }
+                    ]
+                },
+                {
+                    "title": "housing needs",
+                    "examples": "needs for temporary housing, apartments, sublets, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "description",
+                            "input-example": "young couple looking for apartment"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "area",
+                            "input-example": "south city, benton park area"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "way to contact you",
+                            "input-example": "314-000-1312"
+                        },
+                        {
+                            "input-type": "checkbox",
+                            "input-label": "do you want it to be anonymous?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "art",
+            "subcategories": [
+                {
+                    "title": "art",
+                    "examples": "paintings, drawings, collages, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "artist",
+                            "input-example": "fern"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "title",
+                            "input-example": "untitled"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "medium",
+                            "input-example": "collage, 11 x 17"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "link",
+                            "input-example": "google drive link, instagram link, imgur, etc."
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "description (optional)",
+                            "input-example": "i'm interested in the idea of knowing a community through what it leaves behind so I created character sketches of people with what they've thrown away."
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "price (optional)",
+                            "input-example": "$30.00"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "contact (optional)",
+                            "input-example": "Instagram @fern_&_me"
+                        }
+                    ]
+                },
+                {
+                    "title": "poetry",
+                    "examples": "lyrics, poems, haiku, etc.",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "artist",
+                            "input-example": "fern"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "title",
+                            "input-example": "untitled"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "description (optional)",
+                            "input-example": "this is a poem i originally wrote for my dog but i think it speaks to more than that"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "contents",
+                            "input-example": "put your poem here"
+                        }
+                    ]
+                },
+                {
+                    "title": "writing",
+                    "examples": "stories, narratives, essays, etc. (also consider education -> writing)",
+                    "inputs": [
+                        {
+                            "input-type": "text",
+                            "input-label": "artist",
+                            "input-example": "fern"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "title",
+                            "input-example": "untitled"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "description (optional)",
+                            "input-example": "this is a story i originally wrote for my dog but i think it speaks to more than that"
+                        },
+                        {
+                            "input-type": "text",
+                            "input-label": "contents",
+                            "input-example": "put your writing here"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+} 
