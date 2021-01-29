@@ -5,7 +5,7 @@
             "subcategories": [
                 {
                     "title": "services you can offer",
-                    "examples": "skillshares, babysitting, rides, grocery store runs, etc.",
+                    "examples": "babysitting, rides, grocery store runs, etc.",
                     "inputs": [
                         {
                             "inputtype": "text",
@@ -125,7 +125,7 @@
                         },
                         {
                             "inputtype": "checkbox",
-                            "inputlabel": "do you want it to be anonymous?"
+                            "inputlabel": "do you want to remain anonymous?"
                         }, 
                         {
                             "inputtype": "text",
@@ -155,7 +155,60 @@
                         },
                         {
                             "inputtype": "checkbox",
-                            "inputlabel": "do you want it to be anonymous?"
+                            "inputlabel": "do you want to remain anonymous?"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "skill-sharing",
+            "subcategories": [
+                {
+                    "title": "community garden needs",
+                    "examples": "needed workers, needed land, needed tools, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "location",
+                            "inputexample": "tower grove south"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "needs",
+                            "inputexample": "gardeners and tools any time"
+                        }
+                    ]
+                },
+                {
+                    "title": "skill-share requests",
+                    "examples": "self-defense training, painting, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "skill you want to be shared",
+                            "inputexample": "self-defense training"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "preferred location",
+                            "inputexample": "shaw"
+                        }
+                    ]
+                },
+                {
+                    "title": "skill-share offers",
+                    "examples": "self-defense training, painting, etc.",
+                    "inputs": [
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "skill you can share",
+                            "inputexample": "self-defense training"
+                        },
+                        {
+                            "inputtype": "text",
+                            "inputlabel": "available dates/times",
+                            "inputexample": "no preference"
                         }
                     ]
                 }
@@ -233,7 +286,7 @@
                 },
                 {
                     "title": "writing",
-                    "examples": "stories, narratives, essays, etc. (also consider education -> writing)",
+                    "examples": "stories, narratives, essays, etc.",
                     "inputs": [
                         {
                             "inputtype": "text",
@@ -326,7 +379,7 @@
                         {
                             "inputtype": "text",
                             "inputlabel": "description (optional)",
-                            "inputexample": "saves me tons of money every months"
+                            "inputexample": "saves me tons of money every month"
                         },
                         {
                             "inputtype": "text",
