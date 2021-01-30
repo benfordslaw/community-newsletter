@@ -55,7 +55,7 @@ function setup() {
   currentNewsletter = lettersJSON.newsletters[lettersJSON.newsletters.length-1-newsletterCount];
   currentNewsletterArray = Object.keys(currentNewsletter);
   if(proportion == -1){
-    numPages = ceil(currentNewsletterArray.length / 4) * 4;
+    numPages = ceil(currentNewsletterArray.length / 8) * 8;
   } else {
     numPages = currentNewsletterArray.length;
   }
@@ -74,18 +74,35 @@ function setup() {
   switch(proportion){
     case -1:
       defaultStroke = maxStroke/2;
-      push();
-      translate(width/2, height/2);
-      displayPage(0, width/2, height/2);
-      translate(-width/2,0);
-      displayPage(numPages-1, width/2, height/2);
-      rotate(PI);
-      translate(-width/2, 0);
-      displayPage(numPages/2 + 1, width/2, height/2);
-      translate(-width/2, 0);
-      displayPage(numPages/2, width/2, height/2);
-      pop();
-      save(currentNewsletter[currentNewsletterArray[0]] + "-zine-format.svg");
+      for(var rootPage=0; rootPage<numPages/4; rootPage++){
+        if(rootPage%2 == 0){
+          push();
+          translate(width/2, height/2);
+          displayPage(rootPage, width/2, height/2);
+          translate(-width/2,0);
+          displayPage(numPages-1-rootPage, width/2, height/2);
+          rotate(PI);
+          translate(-width/2, 0);
+          displayPage(numPages/2 + rootPage, width/2, height/2);
+          translate(-width/2, 0);
+          displayPage(numPages/2 - 1 - rootPage, width/2, height/2);
+          pop();
+          save(currentNewsletter[currentNewsletterArray[0]] + "-zine-format-" + rootPage + "-front.svg");
+        } else {
+          push();
+          translate(width/2, height/2);
+          displayPage(numPages-1-rootPage, width/2, height/2);
+          translate(-width/2,0);
+          displayPage(rootPage, width/2, height/2);
+          rotate(PI);
+          translate(-width/2, 0);
+          displayPage(numPages/2 - 1 - rootPage, width/2, height/2);
+          translate(-width/2, 0);
+          displayPage(numPages/2 + rootPage, width/2, height/2);
+          save(currentNewsletter[currentNewsletterArray[0]] + "-zine-format-" + (rootPage-1) + "-back.svg");
+          pop();
+        }
+      }
       break;
     case -2:
       for(var i=0; i<numPages; i++){
@@ -176,7 +193,11 @@ function displayPage(pageNavCount, w, h) {
       }
     } else {
       for(var i=1; i<numPages; i++){  
-        hersheyText(i + ". " + currentNewsletterArray[i], bodyTextSize, 4*padding, yShiftSum);
+        if(!currentNewsletterArray[i]){
+          hersheyText(i + ". blank", bodyTextSize, 4*padding, yShiftSum);
+        } else {
+          hersheyText(i + ". " + currentNewsletterArray[i], bodyTextSize, 4*padding, yShiftSum);
+        }
         yShiftSum+=padding;
       }
     }
